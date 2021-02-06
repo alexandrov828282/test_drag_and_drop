@@ -18,7 +18,7 @@
 resize();
 
 //изменение размера окна
-document.addEventListener("DOMContentLoaded", (event) =>
+document.addEventListener("DOMContentLoaded", () =>
 {
     window.onresize = () => {
         resize();
