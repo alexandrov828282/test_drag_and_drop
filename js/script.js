@@ -7,14 +7,28 @@
 // dragend   - срабатывает один раз относительно перетаскиваемого элемента при завершении его перемещения независимо 
 //             от того, был ли элемент перемещен в итоге.
 
-let candyElem = document.querySelector('.candy');
+// let candyElem = document.querySelector('.candy');
 
-candyElem.addEventListener('dragstart', ()=>{
-        // console.log('захват произошёл');
-    }
+// candyElem.addEventListener('dragstart', ()=>{
+//         // console.log('захват произошёл');
+//     }
 
-)
+// )
 
+resize();
 
+//изменение размера окна
+document.addEventListener("DOMContentLoaded", (event) =>
+{
+    window.onresize = () => {
+        resize();
+    };
+});
 
-// console.log(candyElem);
+function resize()
+{
+    let elemVideo = document.getElementById('video');
+    elemVideo.style.width = `${document.documentElement.clientWidth}px`;
+    elemVideo.style.height = `${document.documentElement.clientHeight-4}px`;
+    
+}
